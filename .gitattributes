@@ -1,0 +1,5 @@
+# Normalize line endings; keep generated figures as text so diffs stay readable
+* text=auto
+*.svg text
+*.json text
+*.pdf binary
