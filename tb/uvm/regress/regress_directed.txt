@@ -1,0 +1,12 @@
+# directed sign-off list (TRM examples and case lists)
+dma_dir_1d_test
+dma_dir_wrap1d_test
+dma_dir_2d_test
+dma_dir_tmplt_test
+dma_dir_burst_test
+dma_dir_regend_test
+dma_dir_link_test
+dma_dir_done_test
+dma_dir_trig_sw_test
+dma_dir_trig_test
+dma_dir_stream_test

@@ -1,0 +1,5 @@
+dma_1d_test       2 +NCMD=40
+dma_wrapfill_test 2 +NCMD=40
+dma_2d_test       2 +NCMD=40
+dma_tmplt_test    2 +NCMD=30
+dma_multi_ch_test 2 +NCMD=6

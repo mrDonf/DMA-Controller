@@ -1,0 +1,5 @@
+dma_bug01_link_1kb_test
+dma_bug02_w1c_test
+dma_bug03_pause_trigout_test
+dma_bug04_clear_test
+dma_bug08_link_abort_test

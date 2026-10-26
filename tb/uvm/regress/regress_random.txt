@@ -1,0 +1,9 @@
+# ---- constrained random: used to close functional / code coverage only
+dma_rand_test      8 +NCMD=200
+dma_2d_test        4 +NCMD=200
+dma_tmplt_test     2 +NCMD=100
+dma_wrapfill_test  2 +NCMD=150
+dma_multi_ch_test  4 +NCMD=25
+dma_link_test      4 +NCMD=10
+dma_stream_test    2
+dma_trig_fc_test   2

@@ -1,0 +1,15 @@
+dma_smoke_test
+dma_link_test
+dma_link_err_test
+dma_autoboot_test
+dma_restart_test
+dma_trig_cmd_test
+dma_trig_fc_test
+dma_stream_test
+dma_stream_err_test
+dma_err_test
+dma_ctrl_test
+dma_sec_test
+dma_reg_test
+dma_lpi_test
+dma_gpo_irq_test

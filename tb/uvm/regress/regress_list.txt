@@ -1,0 +1,39 @@
+# ---- main sign-off list: directed tests (one seed each)
+dma_smoke_test
+dma_dir_1d_test
+dma_dir_wrap1d_test
+dma_dir_2d_test
+dma_dir_tmplt_test
+dma_dir_burst_test
+dma_dir_regend_test
+dma_dir_link_test
+dma_dir_done_test
+dma_dir_trig_sw_test
+dma_dir_trig_test
+dma_dir_stream_test
+dma_link_test
+dma_link_err_test
+dma_autoboot_test
+dma_restart_test
+dma_trig_cmd_test
+dma_trig_fc_test
+dma_stream_test
+dma_stream_err_test
+dma_err_test
+dma_ctrl_test
+dma_sec_test
+dma_reg_test
+dma_lpi_test
+dma_gpo_irq_test
+dma_trig_mtx_test
+dma_unit_status_test
+dma_bug01_link_1kb_test
+dma_bug02_w1c_test
+dma_bug03_pause_trigout_test
+dma_bug04_clear_test
+dma_bug08_link_abort_test
+# ---- clock enable / asynchronous trigger variants of directed tests
+dma_dir_1d_test     1 +ACLK_DIV=2 +PCLK_DIV=3
+dma_dir_trig_test   1 +TRIG_ASYNC +PER_CLK_PS=23700
+dma_trig_fc_test    1 +TRIG_ASYNC +PER_CLK_PS=7100
+dma_ctrl_test       1 +ACLK_DIV=3

@@ -1,0 +1,9 @@
+# Performance suite (scripts/perf_report.py parses the PERF lines of the logs)
+dma_perf_size_test
+dma_perf_tsize_test
+dma_perf_align_test
+dma_perf_burst_test
+dma_perf_latency_test
+dma_perf_multich_test
+dma_perf_arb_test
+dma_perf_cmd_test
