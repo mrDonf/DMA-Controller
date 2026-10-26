@@ -1,0 +1,129 @@
+{
+ "signal": [
+  {
+   "name": "clk",
+   "wave": "pppppppppppppppp"
+  },
+  {
+   "name": "cycle",
+   "wave": "2323232323232323",
+   "data": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+   ]
+  },
+  {},
+  [
+   "APB",
+   {
+    "name": "PSEL",
+    "wave": "1....0.........."
+   },
+   {
+    "name": "PENABLE",
+    "wave": "01...0.........."
+   },
+   {
+    "name": "PWRITE",
+    "wave": "1..............."
+   },
+   {
+    "name": "PADDR",
+    "wave": "3....x..........",
+    "data": [
+     "CH0_CMD"
+    ]
+   },
+   {
+    "name": "PWDATA",
+    "wave": "4....x..........",
+    "data": [
+     "1"
+    ]
+   },
+   {
+    "name": "PREADY",
+    "wave": "0...10.........."
+   }
+  ],
+  [
+   "CH0",
+   {
+    "name": "FSM ch0",
+    "wave": "2..222222.......",
+    "data": [
+     "IDLE",
+     "CFG",
+     "CHK",
+     "ALLOC",
+     "GPO",
+     "CTRIG",
+     "XFER"
+    ]
+   },
+   {
+    "name": "ch_enabled[0]",
+    "wave": "0..1............"
+   }
+  ],
+  [
+   "AR",
+   {
+    "name": "ARVALID",
+    "wave": "0...........10.."
+   },
+   {
+    "name": "ARREADY",
+    "wave": "1..............."
+   },
+   {
+    "name": "ARADDR",
+    "wave": "x...........3x..",
+    "data": [
+     "101011"
+    ]
+   },
+   {
+    "name": "ARLEN",
+    "wave": "x...........3x..",
+    "data": [
+     "2"
+    ]
+   },
+   {
+    "name": "ARSIZE",
+    "wave": "x...........3x..",
+    "data": [
+     "3"
+    ]
+   },
+   {
+    "name": "ARID",
+    "wave": "x...........3x..",
+    "data": [
+     "0"
+    ]
+   }
+  ]
+ ],
+ "config": {
+  "hscale": 2
+ },
+ "head": {
+  "text": "Command start latency: ENABLECMD write -> channel FSM -> first AR"
+ }
+}

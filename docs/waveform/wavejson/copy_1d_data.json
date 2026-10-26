@@ -1,0 +1,101 @@
+{
+ "signal": [
+  {
+   "name": "clk",
+   "wave": "ppppp|ppppppp"
+  },
+  {
+   "name": "cycle",
+   "wave": "23232|2323232",
+   "data": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18"
+   ]
+  },
+  {},
+  [
+   "R",
+   {
+    "name": "RVALID",
+    "wave": "01..0|......."
+   },
+   {
+    "name": "RREADY",
+    "wave": "1....|......."
+   },
+   {
+    "name": "RID",
+    "wave": "x333x|.......",
+    "data": [
+     "0",
+     "0",
+     "0"
+    ]
+   },
+   {
+    "name": "RLAST",
+    "wave": "x0.1x|......."
+   },
+   {
+    "name": "RDATA",
+    "wave": "x444x|.......",
+    "data": [
+     "637ae2dd7062dde6",
+     "cd424a375e53e990",
+     "edd0f9297451e2e4"
+    ]
+   }
+  ],
+  [
+   "W",
+   {
+    "name": "WVALID",
+    "wave": "0....|.1...0."
+   },
+   {
+    "name": "WREADY",
+    "wave": "1....|......."
+   },
+   {
+    "name": "WLAST",
+    "wave": "x....|.0..1x."
+   },
+   {
+    "name": "WSTRB",
+    "wave": "x....|.3333x.",
+    "data": [
+     "f0",
+     "ff",
+     "ff",
+     "07"
+    ]
+   },
+   {
+    "name": "WDATA",
+    "wave": "x....|.4444x.",
+    "data": [
+     "dd7062dd00000000",
+     "375e53e990637ae2",
+     "297451e2e4cd424a",
+     "0000000000edd0f9"
+    ]
+   }
+  ]
+ ],
+ "config": {
+  "hscale": 4
+ },
+ "head": {
+  "text": "1D copy (TRM Fig. 5-1), zoom: data and byte strobes of the read and write beats"
+ }
+}

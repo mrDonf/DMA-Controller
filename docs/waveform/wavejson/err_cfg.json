@@ -1,0 +1,121 @@
+{
+ "signal": [
+  {
+   "name": "clk",
+   "wave": "ppppp|pppppppppppppppp"
+  },
+  {
+   "name": "cycle",
+   "wave": "23232|3232323232323232",
+   "data": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "115",
+    "116",
+    "117",
+    "118",
+    "119",
+    "120",
+    "121",
+    "122",
+    "123",
+    "124",
+    "125",
+    "126",
+    "127",
+    "128",
+    "129",
+    "130"
+   ]
+  },
+  {},
+  [
+   "APB",
+   {
+    "name": "PSEL",
+    "wave": "1....|.....0..1......."
+   },
+   {
+    "name": "PENABLE",
+    "wave": "01...|01...0...1...01."
+   },
+   {
+    "name": "PWRITE",
+    "wave": "1....|........0......."
+   },
+   {
+    "name": "PADDR",
+    "wave": "3....|3....x..3....3..",
+    "data": [
+     "CH0_CTRL",
+     "CH0_CMD",
+     "CH0_STATUS",
+     "CH0_ERRINFO"
+    ]
+   },
+   {
+    "name": "PWDATA",
+    "wave": "4....|4....x..........",
+    "data": [
+     "200801",
+     "1"
+    ]
+   },
+   {
+    "name": "PREADY",
+    "wave": "0...1|0...10......10.."
+   }
+  ],
+  [
+   "CH0",
+   {
+    "name": "FSM ch0",
+    "wave": "2....|2..22222........",
+    "data": [
+     "IDLE",
+     "IDLE",
+     "CFG",
+     "CHK",
+     "STOP",
+     "FIN",
+     "IDLE"
+    ]
+   },
+   {
+    "name": "ch_enabled[0]",
+    "wave": "0....|...1...0........"
+   },
+   {
+    "name": "ch_err[0]",
+    "wave": "0....|.......1........"
+   },
+   {
+    "name": "irq_channel[0]",
+    "wave": "0....|........1......."
+   }
+  ],
+  [
+   "AR",
+   {
+    "name": "ARVALID",
+    "wave": "0....|................"
+   }
+  ],
+  [
+   "AW",
+   {
+    "name": "AWVALID",
+    "wave": "0....|................"
+   }
+  ]
+ ],
+ "config": {
+  "hscale": 1
+ },
+ "head": {
+  "text": "Configuration error (REGVALERR): illegal XTYPE in CH_CTRL is rejected in CHK, no AXI traffic"
+ }
+}

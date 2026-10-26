@@ -1,0 +1,443 @@
+# Output of docs/waveform/tools/check_protocols.py (seed 1, build 'default', QuestaSim 10.7c)
+# Simulations: the 19 UVM tests behind the figures (see 11_consistency_report.md).
+# 'checked=N' counts the items examined by a rule (cycles, handshakes, bursts, ...); a rule with checked=0 had no stimulus in that test.
+
+[dma_autoboot_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=21     
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=64     
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=50     
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=50     
+  ok   _m0: every B belongs to a fully written burst                                                   checked=6      
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=7      
+  ok   _m0: link reads use ARCMDLINK=1, ARPROT[2]=1, size=DATA_WIDTH, INCR (TRM 4.3.9, 5.7.2)          checked=8      
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=7      
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=1      
+  ok   APB: wait states per access (write=[] read=[3], TRM/arch: 3 with pclken=1)                      checked=1      
+  ok   trigger in: 4-phase ordering                                                                    checked=1108   
+  ok   trigger out: 4-phase ordering                                                                   checked=1108   
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=278    
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_ctrl_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=861    
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=738    
+  ok   _m0: W VALID held and payload stable until READY                                                checked=2617   
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=720    
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=2742   
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=2725   
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=2725   
+  ok   _m0: every B belongs to a fully written burst                                                   checked=339    
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=381    
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=381    
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=720    
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=264    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=264    
+  ok   trigger in: 4-phase ordering                                                                    checked=50688  
+  ok   trigger out: 4-phase ordering                                                                   checked=50688  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=12673  
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_1d_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=1654   
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=6015   
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=5980   
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=5980   
+  ok   _m0: every B belongs to a fully written burst                                                   checked=779    
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=874    
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=874    
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=1654   
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=5209   
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=5209   
+  ok   trigger in: 4-phase ordering                                                                    checked=159992 
+  ok   trigger out: 4-phase ordering                                                                   checked=159992 
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=39999  
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_2d_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=1887   
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=1411   
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=1358   
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=1358   
+  ok   _m0: every B belongs to a fully written burst                                                   checked=790    
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=1097   
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=1097   
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=1887   
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=4509   
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=4509   
+  ok   trigger in: 4-phase ordering                                                                    checked=114056 
+  ok   trigger out: 4-phase ordering                                                                   checked=114056 
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=28515  
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_burst_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=48     
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=73     
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=72     
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=72     
+  ok   _m0: every B belongs to a fully written burst                                                   checked=26     
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=22     
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=22     
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=48     
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=216    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=216    
+  ok   trigger in: 4-phase ordering                                                                    checked=6160   
+  ok   trigger out: 4-phase ordering                                                                   checked=6160   
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=1541   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_done_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=28     
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=39     
+  ok   _m0: W VALID held and payload stable until READY                                                checked=106    
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=36     
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=136    
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=132    
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=132    
+  ok   _m0: every B belongs to a fully written burst                                                   checked=17     
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=17     
+  ok   _m0: link reads use ARCMDLINK=1, ARPROT[2]=1, size=DATA_WIDTH, INCR (TRM 4.3.9, 5.7.2)          checked=2      
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=17     
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=242    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=242    
+  ok   trigger in: 4-phase ordering                                                                    checked=7032   
+  ok   trigger out: 4-phase ordering                                                                   checked=7032   
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=1759   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_link_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=13     
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=30     
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=21     
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=21     
+  ok   _m0: every B belongs to a fully written burst                                                   checked=3      
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=4      
+  ok   _m0: link reads use ARCMDLINK=1, ARPROT[2]=1, size=DATA_WIDTH, INCR (TRM 4.3.9, 5.7.2)          checked=6      
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=4      
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=54     
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=54     
+  ok   trigger in: 4-phase ordering                                                                    checked=2184   
+  ok   trigger out: 4-phase ordering                                                                   checked=2184   
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=547    
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_stream_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=28     
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=36     
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=33     
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=33     
+  ok   _m0: every B belongs to a fully written burst                                                   checked=14     
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=14     
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=14     
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=28     
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=216    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=216    
+  ok   trigger in: 4-phase ordering                                                                    checked=6144   
+  ok   trigger out: 4-phase ordering                                                                   checked=6144   
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=1537   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=20     
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=20     
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_trig_sw_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=21     
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=13     
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=32     
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=48     
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=28     
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=28     
+  ok   _m0: every B belongs to a fully written burst                                                   checked=13     
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=19     
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=19     
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=32     
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=393    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=393    
+  ok   trigger in: 4-phase ordering                                                                    checked=10404  
+  ok   trigger out: 4-phase ordering                                                                   checked=10404  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=2602   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_trig_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=23     
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=29     
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=16     
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=16     
+  ok   _m0: every B belongs to a fully written burst                                                   checked=7      
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=16     
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=16     
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=23     
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=108    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=108    
+  ok   trigger in: 4-phase ordering                                                                    checked=5744   
+  ok   trigger out: 4-phase ordering                                                                   checked=5744   
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=1437   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_dir_wrap1d_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=116    
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=114    
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=93     
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=93     
+  ok   _m0: every B belongs to a fully written burst                                                   checked=40     
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=76     
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=76     
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=116    
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=1377   
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=1377   
+  ok   trigger in: 4-phase ordering                                                                    checked=32688  
+  ok   trigger out: 4-phase ordering                                                                   checked=32688  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=8173   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_err_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=157    
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=135    
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=264    
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=264    
+  ok   _m0: every B belongs to a fully written burst                                                   checked=119    
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=38     
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=38     
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=157    
+  ok   _m1: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m1: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m1: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m1: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=39     
+  ok   _m1: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=20     
+  ok   _m1: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=40     
+  ok   _m1: WSTRB only inside the byte window of its beat                                              checked=40     
+  ok   _m1: every B belongs to a fully written burst                                                   checked=32     
+  ok   _m1: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=7      
+  ok   _m1: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=7      
+  ok   _m1: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=39     
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=669    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=669    
+  ok   trigger in: 4-phase ordering                                                                    checked=16432  
+  ok   trigger out: 4-phase ordering                                                                   checked=16432  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=4109   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=18     
+
+[dma_gpo_irq_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=47     
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=84     
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=85     
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=85     
+  ok   _m0: every B belongs to a fully written burst                                                   checked=23     
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=24     
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=24     
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=47     
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=399    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=399    
+  ok   trigger in: 4-phase ordering                                                                    checked=10268  
+  ok   trigger out: 4-phase ordering                                                                   checked=10268  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=2568   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=1      
+
+[dma_lpi_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=152    
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=145    
+  ok   _m0: W VALID held and payload stable until READY                                                checked=483    
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=928    
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=1300   
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=629    
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=629    
+  ok   _m0: every B belongs to a fully written burst                                                   checked=87     
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=841    
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=841    
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=928    
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=89     
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=89     
+  ok   trigger in: 4-phase ordering                                                                    checked=14272  
+  ok   trigger out: 4-phase ordering                                                                   checked=14272  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=3569   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   Q-Channel: every request answered by accept xor deny within 8 cycles                            checked=3      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_multi_ch_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=2199   
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=1354   
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=2961   
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=2961   
+  ok   _m0: every B belongs to a fully written burst                                                   checked=1604   
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=595    
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=595    
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=2199   
+  ok   _m1: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m1: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m1: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m1: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=3164   
+  ok   _m1: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=2553   
+  ok   _m1: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=2868   
+  ok   _m1: WSTRB only inside the byte window of its beat                                              checked=2868   
+  ok   _m1: every B belongs to a fully written burst                                                   checked=1889   
+  ok   _m1: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=1275   
+  ok   _m1: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=1275   
+  ok   _m1: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=3164   
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=864    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=864    
+  ok   trigger in: 4-phase ordering                                                                    checked=43352  
+  ok   trigger out: 4-phase ordering                                                                   checked=43352  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=10839  
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_perf_arb_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=29201  
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=12684  
+  ok   _m0: W VALID held and payload stable until READY                                                checked=42922  
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=29568  
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=53248  
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=53248  
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=53248  
+  ok   _m0: every B belongs to a fully written burst                                                   checked=14784  
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=14784  
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=14784  
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=29568  
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=1404   
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=1404   
+  ok   trigger in: 4-phase ordering                                                                    checked=465584 
+  ok   trigger out: 4-phase ordering                                                                   checked=465584 
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=116397 
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_restart_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=424    
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=808    
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=818    
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=818    
+  ok   _m0: every B belongs to a fully written burst                                                   checked=196    
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=228    
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=228    
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=424    
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=206    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=206    
+  ok   trigger in: 4-phase ordering                                                                    checked=17904  
+  ok   trigger out: 4-phase ordering                                                                   checked=17904  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=4477   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_stream_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=1946   
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=1978   
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=1143   
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=1143   
+  ok   _m0: every B belongs to a fully written burst                                                   checked=742    
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=1204   
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=1204   
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=1946   
+  ok   _m1: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m1: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m1: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m1: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=1119   
+  ok   _m1: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=1675   
+  ok   _m1: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=1134   
+  ok   _m1: WSTRB only inside the byte window of its beat                                              checked=1134   
+  ok   _m1: every B belongs to a fully written burst                                                   checked=514    
+  ok   _m1: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=605    
+  ok   _m1: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=605    
+  ok   _m1: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=1119   
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=648    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=648    
+  ok   trigger in: 4-phase ordering                                                                    checked=46760  
+  ok   trigger out: 4-phase ordering                                                                   checked=46760  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=11691  
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=917    
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=917    
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+[dma_trig_cmd_test]
+  ok   _m0: AR VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: AW VALID held and payload stable until READY                                               checked=0      
+  ok   _m0: W VALID held and payload stable until READY                                                checked=0      
+  ok   _m0: AR/AW burst legal (size<=bus, FIXED/INCR, <=16 beats, no 1KB crossing)                     checked=164    
+  ok   _m0: R beats match ARLEN, RLAST on last beat, ID routing                                        checked=373    
+  ok   _m0: W never before AW, beat count = AWLEN+1, WLAST on last beat                                checked=393    
+  ok   _m0: WSTRB only inside the byte window of its beat                                              checked=393    
+  ok   _m0: every B belongs to a fully written burst                                                   checked=75     
+  ok   _m0: read bytes in flight <= channel FIFO size (reads issue only with room for the response)    checked=89     
+  ok   _m0: data reads are not instruction accesses (ARPROT[2]=0)                                      checked=89     
+  ok   _m0: AxQOS equals CH_CTRL.CHPRIO of the channel whose number is AxID                            checked=164    
+  ok   APB: setup phase, stable address / data, completion with PREADY                                 checked=320    
+  ok   APB: wait states per access (write=[3] read=[3], TRM/arch: 3 with pclken=1)                     checked=320    
+  ok   trigger in: 4-phase ordering                                                                    checked=16392  
+  ok   trigger out: 4-phase ordering                                                                   checked=16392  
+  ok   trigger in: ack_type never RESERVED (2'b11)                                                     checked=4099   
+  ok   stream out: TVALID held with stable payload until TREADY                                        checked=0      
+  ok   stream out: TSTRB all ones except on the TLAST beat (TRM 4.5)                                   checked=0      
+  ok   ch_err rises together with ch_enabled falling (STAT_ERR set on return to DISABLED)              checked=0      
+
+Informational latencies (cycles, plain commands without link / trigger / stop):
+  ENABLECMD (ch_enabled rises) -> first AR, 1D: {9: 261, 23: 1, 29: 3}
+  ENABLECMD (ch_enabled rises) -> first AR, 2D (MUL state): {17: 65}
+  last B -> ch_enabled falls: {6: 355, 7: 2, 8: 1}
+
+Total violations: 0 over 395 checks

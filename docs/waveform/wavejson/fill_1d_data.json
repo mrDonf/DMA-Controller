@@ -1,0 +1,110 @@
+{
+ "signal": [
+  {
+   "name": "clk",
+   "wave": "pppppppppp|ppppppp"
+  },
+  {
+   "name": "cycle",
+   "wave": "2323232323|2323232",
+   "data": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+   ]
+  },
+  {},
+  [
+   "R",
+   {
+    "name": "RVALID",
+    "wave": "01....0...|......."
+   },
+   {
+    "name": "RREADY",
+    "wave": "1.........|......."
+   },
+   {
+    "name": "RID",
+    "wave": "x33333x...|.......",
+    "data": [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0"
+    ]
+   },
+   {
+    "name": "RLAST",
+    "wave": "x0...1x...|......."
+   },
+   {
+    "name": "RDATA",
+    "wave": "x44444x...|.......",
+    "data": [
+     "8c24a1e5e561dede",
+     "8c24a1e5e561dede",
+     "8c24a1e5e561dede",
+     "8c24a1e5e561dede",
+     "8c24a1e5e561dede"
+    ]
+   }
+  ],
+  [
+   "W",
+   {
+    "name": "WVALID",
+    "wave": "0.........|.1...0."
+   },
+   {
+    "name": "WREADY",
+    "wave": "1.........|......."
+   },
+   {
+    "name": "WLAST",
+    "wave": "x.........|.0101x."
+   },
+   {
+    "name": "WSTRB",
+    "wave": "x.........|.3333x.",
+    "data": [
+     "80",
+     "0f",
+     "f0",
+     "ff"
+    ]
+   },
+   {
+    "name": "WDATA",
+    "wave": "x.........|.4444x.",
+    "data": [
+     "de00000000000000",
+     "00000000a1e5e561",
+     "1717171700000000",
+     "1717171717171717"
+    ]
+   }
+  ]
+ ],
+ "config": {
+  "hscale": 4
+ },
+ "head": {
+  "text": "1D FILL, zoom: source bytes followed by the FILLVAL pattern in the write data"
+ }
+}

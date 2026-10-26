@@ -1,0 +1,80 @@
+{
+ "signal": [
+  {
+   "name": "clk",
+   "wave": "pppppppppppppppp"
+  },
+  {
+   "name": "cycle",
+   "wave": "2323232323232323",
+   "data": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+   ]
+  },
+  {},
+  [
+   "APB",
+   {
+    "name": "PSEL",
+    "wave": "1..............."
+   },
+   {
+    "name": "PENABLE",
+    "wave": "1...01...01...01"
+   },
+   {
+    "name": "PWRITE",
+    "wave": "1..............."
+   },
+   {
+    "name": "PADDR",
+    "wave": "3...3....3....3.",
+    "data": [
+     "1008",
+     "100c",
+     "1010",
+     "1018"
+    ]
+   },
+   {
+    "name": "PWDATA",
+    "wave": "4...4....4....4.",
+    "data": [
+     "f",
+     "200200",
+     "101011",
+     "301014"
+    ]
+   },
+   {
+    "name": "PREADY",
+    "wave": "0..10...10...10."
+   },
+   {
+    "name": "PRDATA",
+    "wave": "x..............."
+   }
+  ]
+ ],
+ "config": {
+  "hscale": 2
+ },
+ "head": {
+  "text": "APB write: CH_INTREN, CH_CTRL, CH_SRCADDR of channel 0 (back to back, 3 wait states each)"
+ }
+}

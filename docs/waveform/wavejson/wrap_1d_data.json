@@ -1,0 +1,116 @@
+{
+ "signal": [
+  {
+   "name": "clk",
+   "wave": "pppppppppp|ppppppp"
+  },
+  {
+   "name": "cycle",
+   "wave": "2323232323|2323232",
+   "data": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "26",
+    "27",
+    "28",
+    "29",
+    "30",
+    "31",
+    "32"
+   ]
+  },
+  {},
+  [
+   "R",
+   {
+    "name": "RVALID",
+    "wave": "01........|0......"
+   },
+   {
+    "name": "RREADY",
+    "wave": "1.........|......."
+   },
+   {
+    "name": "RID",
+    "wave": "x333333333|x......",
+    "data": [
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0",
+     "0"
+    ]
+   },
+   {
+    "name": "RLAST",
+    "wave": "x0...10...|x......"
+   },
+   {
+    "name": "RDATA",
+    "wave": "x444444444|x......",
+    "data": [
+     "23a0fa8fe5d52474",
+     "23a0fa8fe5d52474",
+     "23a0fa8fe5d52474",
+     "23a0fa8fe5d52474",
+     "23a0fa8fe5d52474",
+     "23a0fa8fe5d52474",
+     "23a0fa8fe5d52474",
+     "23a0fa8fe5d52474",
+     "23a0fa8fe5d52474"
+    ]
+   }
+  ],
+  [
+   "W",
+   {
+    "name": "WVALID",
+    "wave": "0.........|.1..0.."
+   },
+   {
+    "name": "WREADY",
+    "wave": "1.........|......."
+   },
+   {
+    "name": "WLAST",
+    "wave": "x.........|.0.1x.."
+   },
+   {
+    "name": "WSTRB",
+    "wave": "x.........|.333x..",
+    "data": [
+     "80",
+     "ff",
+     "ff"
+    ]
+   },
+   {
+    "name": "WDATA",
+    "wave": "x.........|.444x..",
+    "data": [
+     "2400000000000000",
+     "8fe5d524fa8fe5d5",
+     "d524fa8fe5d524fa"
+    ]
+   }
+  ]
+ ],
+ "config": {
+  "hscale": 4
+ },
+ "head": {
+  "text": "1D WRAP, zoom: the 5 source bytes repeat in the write data (byte lanes shifted by the destination offset)"
+ }
+}
