@@ -10,7 +10,7 @@ hand. Each operation is shown from the very beginning:
 4. **finish** – status, interrupt and how the CPU reads the result.
 
 The DMA is a multi-channel AXI5 DMA that follows the programmers model and interfaces of the
-Arm CoreLink DMA-350 (TRM 102482_0000_04, see [`references/README.md`](../../references/README.md)). It is a good idea to read
+Arm CoreLink DMA-350 (TRM, see [`references/README.md`](../../references/README.md)). It is a good idea to read
 [Chapter 1](01_design_overview.md) first; the other chapters can be read in any order.
 
 > **Click a figure to zoom.** The SVG files are wide on purpose (one column per clock cycle) so that every

@@ -1,7 +1,7 @@
 # AXI DMA controller – architecture and micro-architecture
 
 The controller implements the programmers model, the interfaces and the behaviour of the
-Arm CoreLink DMA-350 (TRM 102482_0000_04, see [`references/README.md`](../references/README.md)). All register frames, field encodings,
+Arm CoreLink DMA-350 (TRM, see [`references/README.md`](../references/README.md)). All register frames, field encodings,
 interface signals and protocols follow the TRM. The internal micro-architecture is our own and is
 described here.
 

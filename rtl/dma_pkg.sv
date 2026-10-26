@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // dma_pkg.sv
 // Common types, constants and helper functions for the AXI DMA controller.
-// Register map / field encodings follow the CoreLink DMA-350 TRM (102482_0000_04).
+// Register map / field encodings follow the CoreLink DMA-350 TRM.
 //-----------------------------------------------------------------------------
 package dma_pkg;
 

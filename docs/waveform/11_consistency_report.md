@@ -1,7 +1,7 @@
 # 11. Consistency report: waveforms, TRM, RTL and simulation
 
-This chapter documents how the 41 waveforms were checked against the **specification** (Arm CoreLink DMA-350 TRM
-102482_0000_04), the **RTL** (`rtl/`) and the **simulation** itself, and what the result is.
+This chapter documents how the 41 waveforms were checked against the **specification** (Arm CoreLink DMA-350 TRM),
+the **RTL** (`rtl/`) and the **simulation** itself, and what the result is.
 
 **Result: no inconsistency was found between the TRM, the RTL and the simulated behaviour for everything exercised in
 these figures. All 19 simulations pass their scoreboards, and 395 automatic protocol check instances report 0 violations.**

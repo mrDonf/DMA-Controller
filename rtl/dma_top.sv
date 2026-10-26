@@ -1,7 +1,7 @@
 //-----------------------------------------------------------------------------
 // dma_top.sv
 // AXI DMA controller - top level (CoreLink DMA-350 compatible programmers
-// model and interfaces, TRM 102482_0000_04).
+// model and interfaces, TRM).
 //
 // Per-index port groups of the TRM (trig_in_<TI>_*, str_out_<N>_*, gpo_ch_<N>)
 // are exposed as packed vectors indexed by TI / N. scripts/gen_flat_top.py

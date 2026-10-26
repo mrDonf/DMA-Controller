@@ -1,7 +1,7 @@
 # AXI DMA Controller
 
 A multi-channel **AXI5 DMA controller** written in SystemVerilog, with the programmers model and interfaces of the
-Arm CoreLink DMA-350 (TRM 102482_0000_04), a complete **UVM verification environment** built on AMBA verification IPs,
+Arm CoreLink DMA-350, a complete **UVM verification environment** built on AMBA verification IPs,
 and a **performance analysis**. The documentation explains every operation of the design with waveforms that were
 produced by simulating this RTL.
 
@@ -101,7 +101,7 @@ synthesis and STA, gate-level simulation, a real SRAM-macro build (`MEM_IMPL = 1
 
 ## Third-party material
 
-* **Arm CoreLink DMA-350 Technical Reference Manual** (102482_0000_04) – the specification this design follows. It is
+* **Arm CoreLink DMA-350 Technical Reference Manual** – the specification this design follows. It is
   copyrighted by Arm and is **not** included; see [references/README.md](references/README.md).
 * **AMBA verification IPs** (APB, AXI5, AXI4-Stream) in [`vip_src/`](vip_src/README.md) – from the author's
   [Common-Verification-IP-Library](https://github.com/mrDonf/Common-Verification-IP-Library), plus one small local
